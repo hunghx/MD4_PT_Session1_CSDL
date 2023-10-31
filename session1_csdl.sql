@@ -12,7 +12,7 @@ name varchar(50) unique
 );
 
 create table Student(
-id int,
+id int auto_increment,
 name varchar(100),
 age int check(age >= 15),
 gen bit default 1,
@@ -31,11 +31,11 @@ insert into classname values (1,'11A1'),
 insert into classname(id,name) values (4,'11A4'); 
 
 
-insert into student(id , name,age,gen,className_id) value
-(1,'Nguyễn Văn A',18,1, 1),
-(2,'Nguyễn Văn B',22,0, 1),
-(3,'Nguyễn Văn C',21,0, 2),
-(4,'Nguyễn Văn D',19,0, 2)
+insert into student( name,age,gen,className_id) value
+('Nguyễn Văn A',18,1, 1),
+('Nguyễn Văn B',22,0, 1),
+('Nguyễn Văn C',21,0, 2),
+('Nguyễn Văn D',19,0, 2)
 ;
 -- truy vấn dữ liệu của 1 bảng 
 select * from classname;
